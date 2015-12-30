@@ -8,7 +8,7 @@ PImage gameover;
 void setup()
 {
   size(400, 300);
-  gameover = loadImage("http://2.bp.blogspot.com/-FEwFpHZqbIM/VW-WkfVxjPI/AAAAAAAADT0/4faa6M0fRZw/s400/Metal_Gear_Solid_%2528PSX%2529_20.png");
+  //gameover = loadImage("http://2.bp.blogspot.com/-FEwFpHZqbIM/VW-WkfVxjPI/AAAAAAAADT0/4faa6M0fRZw/s400/Metal_Gear_Solid_%2528PSX%2529_20.png");
   frameRate(40);
   background(255);
   textSize(48);
@@ -126,3 +126,5 @@ void reset()
   border();
 }
   
+
+

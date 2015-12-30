@@ -4,11 +4,9 @@ int compX = 200;
 int compY = 151;
 int compDir = DOWN;
 boolean gameOver = false;
-PImage gameover;
 void setup()
 {
   size(400, 300);
-  //gameover = loadImage("http://2.bp.blogspot.com/-FEwFpHZqbIM/VW-WkfVxjPI/AAAAAAAADT0/4faa6M0fRZw/s400/Metal_Gear_Solid_%2528PSX%2529_20.png");
   frameRate(40);
   background(255);
   textSize(48);
@@ -41,8 +39,7 @@ void human()
   if (get(x, y) != color(255))
   {
     fill(255, 255, 0);
-    image(gameover,0,0,400,300);
-    //text("GAME OVER");
+    text("GAME OVER",200,200);
     gameOver = true;
   }
   stroke(0);
@@ -68,7 +65,7 @@ void human()
 }
 void computer()
 {
-if (get(compX, compY) != color(255))
+  if (get(compX, compY) != color(255))
   {
     fill(255, 255, 0);
     text("YOU WIN", 200, 200);
@@ -83,24 +80,21 @@ if (get(compX, compY) != color(255))
     {
       compDir = LEFT;
     }
-  }
-  else if (compDir == LEFT)
+  } else if (compDir == LEFT)
   {
     compX = compX - 1;
     if (get(compX-1, compY) !=color(255))
     {
       compDir = UP;
     }
-  }
-  else if (compDir == UP)
+  } else if (compDir == UP)
   {
     compY = compY - 1;
     if (get(compX, compY-1) != color(255))
     {
       compDir = RIGHT;
     }
-  }
-  else if (compDir == RIGHT)
+  } else if (compDir == RIGHT)
   {
     compX = compX + 1;
     if (get(compX + 1, compY) != color(255))
@@ -125,6 +119,3 @@ void reset()
   background(255);
   border();
 }
-  
-
-
